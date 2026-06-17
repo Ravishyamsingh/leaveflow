@@ -5,9 +5,11 @@ import StatusBadge from './StatusBadge';
 export default function LeaveTable({
   leaves,
   onStatusChange,
+  showAdminDetails = false,
 }: {
   leaves: Leave[];
   onStatusChange?: (id: string, status: 'APPROVED' | 'REJECTED') => void;
+  showAdminDetails?: boolean;
 }) {
   if (leaves.length === 0) {
     return (
@@ -27,6 +29,8 @@ export default function LeaveTable({
             <th className='p-3 text-left'>From</th>
             <th className='p-3 text-left'>To</th>
             <th className='p-3 text-left'>Days</th>
+            {showAdminDetails && <th className='p-3 text-left'>Reason</th>}
+            {showAdminDetails && <th className='p-3 text-left'>Requested</th>}
             <th className='p-3 text-left'>Status</th>
             <th className='p-3 text-left'>Action</th>
           </tr>
@@ -42,6 +46,16 @@ export default function LeaveTable({
               <td className='p-3'>{new Date(l.from).toLocaleDateString()}</td>
               <td className='p-3'>{new Date(l.to).toLocaleDateString()}</td>
               <td className='p-3'>{l.days}</td>
+              {showAdminDetails && (
+                <td className='p-3 max-w-[220px] truncate text-sm text-gray-300' title={l.reason || 'No reason provided'}>
+                  {l.reason || 'No reason provided'}
+                </td>
+              )}
+              {showAdminDetails && (
+                <td className='p-3 text-sm text-gray-300'>
+                  {new Date(l.createdAt).toLocaleDateString()}
+                </td>
+              )}
               <td className='p-3'>
                 <StatusBadge status={l.status} />
               </td>
