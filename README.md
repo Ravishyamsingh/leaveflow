@@ -50,7 +50,16 @@ Tech stack (summary): Next.js 14, TypeScript, React 18, Tailwind CSS, Headless U
 | Frontend   | https://leaveflow.vercel.app             |
 | Backend    | https://leaveflow-api.onrender.com       |
 
-> 📸 Screenshots / demo video available in the `/demo` folder.
+## 📸 Screenshots
+
+### Home Page
+![LeaveFlow home page](public/img/home%20page%20screenshoot.png)
+
+### User Dashboard
+![LeaveFlow user dashboard](public/img/user%20dashboard.png)
+
+### Admin Dashboard
+![LeaveFlow admin dashboard](public/img/admin%20dashboard.png)
 
 ---
 
@@ -168,28 +177,6 @@ MongoDB Atlas (Mongoose)
 
 ---
 
-### Scroll & Animation
-
-| Interaction | Animation |
-|-------------|-----------|
-| Page load | Cards fade up: `opacity: 0 → 1`, `translateY(30px → 0)`, staggered `0.1s` per card |
-| Stat counter | Numbers count up from 0 on first view (IntersectionObserver triggered) |
-| Route change | Fade transition `0.2s ease` between pages |
-| Button hover | `scale(1.03)` + brightness increase `0.15s` |
-| Modal open | `scale(0.92) → scale(1)` + `opacity: 0 → 1`, `0.25s ease` |
-| Toast notifications | Slide in from top-right, auto-dismiss after 3s |
-
----
-
-### Responsive Breakpoints
-
-| Breakpoint | Layout |
-|------------|--------|
-| `< 768px` | Sidebar hidden, hamburger menu, single column |
-| `768px – 1024px` | Sidebar collapses to icon-only (64px), 2-col grid |
-| `> 1024px` | Full sidebar (240px), 3–4 col bento grid |
-
----
 
 ### Design Inspiration References
 
@@ -313,12 +300,6 @@ Commit convention: `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`
 
 **Ravi Shyam Singh**  
 B.Tech CSE 2026 | Full Stack & AI Engineer  
-[LinkedIn](https://linkedin.com/in/your-profile) • [GitHub](https://github.com/your-username)
+[LinkedIn](https://www.linkedin.com/in/ravi-shyam-singh-790273367/) • [GitHub](https://github.com/Ravishyamsingh/leaveflow)
 
 ---
-
-## 📬 Submission
-
-- **GitHub:** https://github.com/your-username/leaveflow
-- **Demo:** `/demo` folder (screenshots + video)
-- **Submitted to:** Care@nrolled.com
