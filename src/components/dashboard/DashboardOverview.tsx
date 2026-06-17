@@ -23,21 +23,21 @@ interface DashboardOverviewProps {
 
 export default function DashboardOverview({
   stats = {
-    totalLeaves: 20,
-    pendingRequests: 2,
-    approvedLeaves: 15,
-    rejectedLeaves: 3,
-    availableBalance: 5,
-    usedLeaves: 15,
+    totalLeaves: undefined,
+    pendingRequests: undefined,
+    approvedLeaves: undefined,
+    rejectedLeaves: undefined,
+    availableBalance: undefined,
+    usedLeaves: undefined,
   },
   loading = false,
 }: DashboardOverviewProps) {
   if (loading) {
     return (
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map((_, index) => (
           <div
-            key={i}
+            key={index}
             className='h-32 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg animate-pulse'
           />
         ))}
