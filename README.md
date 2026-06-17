@@ -23,6 +23,17 @@ A modern leave management system for employees and admins to manage leave reques
 - Tailwind CSS, Headless UI, Heroicons, Lucide React
 - NextAuth, MongoDB, Redux Toolkit
 
+## Architecture
+Simplified client‑server: Next.js frontend, NextAuth for auth, Redux Toolkit state, MongoDB backend via API routes.
+
+## AI usage
+AI assists in generating leave recommendations and auto‑responses (placeholder for future integration).
+
+## Assumptions
+- Users have a MongoDB instance.
+- Environment variables are correctly set.
+- Admin role exists.
+
 ## Run Locally
 
 ```bash
